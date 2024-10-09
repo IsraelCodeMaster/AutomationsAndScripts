@@ -18,7 +18,7 @@ Para instalar a biblioteca `requests`, execute o seguinte comando:
 pip install requests
 ```
 
-Configuração
+### Configuração
 Chave de API do OpenWeather
 Este projeto utiliza a API do OpenWeather para obter a previsão do tempo. Siga os passos abaixo para obter sua chave de API:
 
@@ -30,32 +30,28 @@ Clique em Generate para criar uma nova chave de API.
 
 Copie a chave gerada.
 
-Atualização do Script
+###Atualização do Script
 Abra o arquivo do script e substitua o texto 'sua_chave_API' pela sua chave de API:
 
 ```python
 
-Copy
 API_KEY = 'sua_chave_API'  # Substitua 'sua_chave_API' pela sua chave de API
 ```
-Como Usar
+###Como Usar
 Clone este repositório:
 
 ```sh
 
-Copy
 git clone https://github.com/IsraelCodeMaster/AutomationsAndScripts.git
+```
 Navegue até o diretório do projeto:
-```
 ```sh
 
-Copy
 cd AutomationsAndScripts/RelogioProjeto/Versao2
-Execute o script:
 ```
+Execute o script:
 ```sh
 
-Copy
 python3 relogio_v2.py
 ```
 
