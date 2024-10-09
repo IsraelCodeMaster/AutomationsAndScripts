@@ -5,7 +5,7 @@ Os scripts são escritos em Python e Bash e podem ser usados para diversas final
 
 ## Scripts Disponíveis
 - `iniciar_maquinas.py`: Script para iniciar máquinas virtuais no VirtualBox.
-- (Adicione mais descrições conforme necessário)
+
 
 ## Como Usar
 1. Clone o repositório.
