@@ -1,6 +1,9 @@
 #!/usr/bin/env python3   
 #shebang or hashbeng 
 
+# Script para iniciar máquinas virtuais
+# Canal do Youtube: https://www.youtube.com/@israelalvespro
+
 #importando as bibliotecas que serão usadas no código
 import  os
 import colorama
