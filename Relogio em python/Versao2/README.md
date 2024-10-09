@@ -2,6 +2,8 @@
 
 Este repositório contém um projeto de relógio em Python que exibe a hora atual, saudação personalizada, previsão do tempo e outras informações úteis. Ele também suporta modos claro e escuro.
 
+![Imagem do Relógio](https://github.com/IsraelCodeMaster/AutomationsAndScripts/blob/main/Relogio%20em%20python/Versao2/Screenshot%20from%202024-10-09%2018-29-14.png)
+
 ## Pré-requisitos
 
 Antes de executar o script, certifique-se de ter as seguintes bibliotecas instaladas:
