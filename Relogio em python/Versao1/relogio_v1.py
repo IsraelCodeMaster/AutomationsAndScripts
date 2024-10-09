@@ -20,8 +20,8 @@ root.minsize(450, 350)
 root.configure(background='#1d1d1d')
 
 # Carregando as imagens para o modo claro e escuro
-light = PhotoImage(file='Versao1/imagens/brightness.png')
-dark = PhotoImage(file='Versao1/imagens/dark.png')
+light = PhotoImage(file='imagens/brightness.png')
+dark = PhotoImage(file='imagens/dark.png')
 
 # Função para alternar entre modo claro e escuro
 def toggle_dark_mode():
