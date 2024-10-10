@@ -26,14 +26,14 @@ Este script utiliza Selenium para automatizar a coleta de informações de víde
    unzip chromedriver_linux64.zip
 
 ### Mova o WebDriver para um diretório no PATH do seu sistema:
-      ```bash
+  ```bash
       sudo mv chromedriver /usr/local/bin/
-  
+  ```                    
 
 ### Verifique a instalação do WebDriver:
-    ```bash
+  ```bash
     chromedriver --version
-    
+  ```  
 
 ### Uso
 
