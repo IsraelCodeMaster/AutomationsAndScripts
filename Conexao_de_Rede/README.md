@@ -17,7 +17,7 @@ Este script monitora a conexão de rede com a internet. Ele testa a conexão usa
 
 1. Clone o repositório para sua máquina local.
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/IsraelCodeMaster/AutomationsAndScripts.git
 ## Para mais videos como esse acesse meu canal do Youtube.
 ```copy
 https://www.youtube.com/@israelalvespro
