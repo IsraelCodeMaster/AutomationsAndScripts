@@ -51,8 +51,8 @@ O script abrirá uma nova aba no navegador, acessará o link da publicação e c
 
 ## Comentários Importantes
 
-O script realiza um loop de comentários a cada 60 segundos, escolhendo um intervalo de tempo aleatório para os comentários.
-Certifique-se de ajustar as coordenadas do clique (x, y) no script para corresponder à posição do botão de comentário na tela do seu computador.
+- ` O script realiza um loop de comentários a cada 60 segundos, escolhendo um intervalo de tempo aleatório para os comentários. `
+- ` Certifique-se de ajustar as coordenadas do clique (x, y) no script para corresponder à posição do botão de comentário na tela do seu computador. `
 
 ## Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
