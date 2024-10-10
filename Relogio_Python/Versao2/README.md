@@ -23,9 +23,9 @@ Para instalar a biblioteca `requests`, execute o seguinte comando:
 pip install requests
 ```
 
-### Configuração ###
+## Configuração ##
 
-## Chave de API do OpenWeather ##
+### Chave de API do OpenWeather ###
 
 Este projeto utiliza a API do OpenWeather para obter a previsão do tempo. Siga os passos abaixo para obter sua chave de API:
 
