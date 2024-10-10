@@ -25,7 +25,10 @@ pip install requests
 
 ###Configuração###
 
+
 ##Chave de API do OpenWeather##
+
+
 Este projeto utiliza a API do OpenWeather para obter a previsão do tempo. Siga os passos abaixo para obter sua chave de API:
 
 Acesse OpenWeather e crie uma conta.
