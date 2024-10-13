@@ -44,9 +44,9 @@ Abra o arquivo do script e substitua o texto 'sua_chave_API' pela sua chave de A
 
 API_KEY = 'sua_chave_API'  # Substitua 'sua_chave_API' pela sua chave de API
 ```
-### Como Usar
+## Como Usar
 
-## Clone este repositório:
+### Clone este repositório:
 ```sh
 
 git clone https://github.com/IsraelCodeMaster/AutomationsAndScripts.git
