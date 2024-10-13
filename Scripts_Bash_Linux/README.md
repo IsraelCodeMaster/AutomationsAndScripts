@@ -16,7 +16,8 @@ Este script permite que você agende o desligamento da sua máquina em um horár
 
 1. Clone o repositório para sua máquina local.
    ```bash
-   git clone https://github.com/seu-usuario/Scripts_Bash_Linux.git
+   git clone https://github.com/IsraelCodeMaster/AutomationsAndScripts.git
+   
 2. Navegue até o diretório do script.
 
     ```bash
