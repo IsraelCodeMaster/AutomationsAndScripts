@@ -21,7 +21,7 @@ Este script permite que você agende o desligamento da sua máquina em um horár
 2. Navegue até o diretório do script.
 
     ```bash
-   cd Scripts_Bash_Linux/Automacoes_Sistema
+   cd AutomationsAndScripts/Scripts_Bash_Linux/
 
 3. Dê permissão de execução ao script.
     ```bash
