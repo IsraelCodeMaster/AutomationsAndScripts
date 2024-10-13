@@ -15,7 +15,7 @@ Antes de executar o script, certifique-se de ter as seguintes bibliotecas instal
 
 - `requests`
 
-### Instalação das Bibliotecas
+## Instalação das Bibliotecas
 
 Para instalar a biblioteca `requests`, execute o seguinte comando:
 
@@ -23,9 +23,9 @@ Para instalar a biblioteca `requests`, execute o seguinte comando:
 pip install requests
 ```
 
-## Configuração ##
+## Configuração 
 
-### Chave de API do OpenWeather ###
+## Chave de API do OpenWeather 
 
 Este projeto utiliza a API do OpenWeather para obter a previsão do tempo. Siga os passos abaixo para obter sua chave de API:
 
@@ -44,9 +44,9 @@ Abra o arquivo do script e substitua o texto 'sua_chave_API' pela sua chave de A
 
 API_KEY = 'sua_chave_API'  # Substitua 'sua_chave_API' pela sua chave de API
 ```
-Como Usar
-Clone este repositório:
+### Como Usar
 
+## Clone este repositório:
 ```sh
 
 git clone https://github.com/IsraelCodeMaster/AutomationsAndScripts.git
