@@ -4,54 +4,60 @@
 # Script para iniciar máquinas virtuais
 # Canal do Youtube: https://www.youtube.com/@israelalvespro
 
-#importando as bibliotecas que serão usadas no código
+# Importando as bibliotecas que serão usadas no código
+import re
+import subprocess
 import  os
 import colorama
-from colorama import init,Fore,Back 
+from colorama import Fore, Back 
 
-#Iniciando o colorama
+# Iniciando o colorama
 colorama.init(autoreset=True)
 
-# Função para imprimir as maquinas
-def imprimir_maquinas(dic_maquinas):
-    print(f"\n{Back.RED}{'MAQUINAS' : ^100}") #Centralizando MÁQUINAS com o parâmetro  : ^100 
-    print('-'*105)
-    repeticoes = 0
-    
-    for maquina, item in dic_maquinas.items(): #criando loop para printar cada item do dicionario
-        repeticoes+=1
-        if repeticoes == 1:
-            print(f'{Fore.GREEN}{maquina: >40} ==> {item: <20}', ' '*23,'|')   
-        elif repeticoes >= 2:
-            print(f'{Fore.GREEN}{maquina: >40} ==> {item: <20}', ' ' *37, '|')
-    print('-'*105)
-    
-#Dicionario de maquinas
-dic_maquinas = {
-                'maquina_01':'kali Roxo',   # nome da sua maquina virtual
-                'maquina_02':'wubuntu', 
-                'maquina_03':'Kali Linux', 
-                'maquina_04':'ubuntu 23.04',
-                 # Coloque quantas maquinas quiser
-                
-    }
+# Lista vazia para receber os nomes das VMS
+vms_list = []
+# Dicionário para armazenar as máquinas virtuais
+dic_maquinas = {}
+
+def list_vms():
+    try:
+        # Executa o comando `VBoxManage list vms` e captura a saída
+        result = subprocess.run(['VBoxManage', 'list', 'vms'], capture_output=True, text=True, check=True)
+        # Usa expressão regular para extrair os nomes entre aspas
+        vm_names = re.findall(r'"([^"]+)"', result.stdout)
+        # Adiciona os nomes à lista
+        for name in vm_names:
+            vms_list.append(name)          
+        # Adicionando valores ao dicionário   
+        for i, vm in enumerate(vms_list, 1): # começando do indice 01
+            dic_maquinas[f"maquina_{i:02d}"] = vm
+            
+    except subprocess.CalledProcessError as e:
+        print(f"Erro ao listar VMs: {e}")
 
 # Função para iniciar a maquina virtual
 def iniciar_maquina(options): #criando uma função
     command = 'virtualboxvm --startvm'
-    machine = dic_maquinas.get(options) # Verifica se a opção está no dicionario 
-    
-    # Verifica se a opção que o usuario digitou esta no dicionario
-    if machine:
+    machine = dic_maquinas.get(options) 
+    if machine: # Verifica se a opção que o usuario digitou esta no dicionario
         os.system(f"{command} '{machine}'") # Aspas simples em caso do nome da maquina ser separado
     else:
         print(f"{Fore.RED}Opção inválida: {options}")
-          
-# Imprimindo as maquinas
-imprimir_maquinas(dic_maquinas)
 
-# Solicitando a opção ao usuário
-options = input('Qual maquina deseja inicar?\n') #atribuindo um valor a variavel options
+if __name__ == "__main__":
+    # Chamando a funcção
+    list_vms()
+    
+    #Centralizando MÁQUINAS com o parâmetro  : ^90
+    print(f"\n{Back.RED}{'MÁQUINAS' : ^90}")  
+    print('-'*90)
+    
+    #Criando loop para printar cada item do dicionário
+    for maquina, item in dic_maquinas.items(): 
+        print(f'{Fore.GREEN}{maquina: >40} ==> {item: <20}', ' '*23,'|')
 
-# Iniciando a maquina escolhida
-iniciar_maquina(options)
+    # Solicitando a opção ao usuário
+    options = input('Qual maquina deseja inicar Israel?\n') # Atribuindo um valor a variavel options
+
+    # Iniciando a maquina escolhida
+    iniciar_maquina(options) 
