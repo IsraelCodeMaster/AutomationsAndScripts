@@ -16,19 +16,18 @@ colorama.init(autoreset=True)
 
 # Função para pegar todos os processos ativos
 def log_activity():
-    nome_user = os.getlogin()
     data_atual = strftime('%d/%m/%y %H:%M:%S')
     rep = 0
-    active_processes = psutil.process_iter(attrs=['pid', 'name', 'status'])
+    active_processes = psutil.process_iter(attrs=['pid', 'name', 'status', 'username'])
     for process in active_processes: 
         rep += 1
-        print(f"[{rep}] {Fore.RED}Process:{Fore.RESET} {process.info['name']} (PID: {Fore.YELLOW}{process.info['pid']}{Fore.RESET}) {Fore.GREEN} ==> {Fore.RESET} User: {Fore.BLUE}{nome_user} {Fore.RESET} || status: {Back.YELLOW}({process.info['status']}{Back.RESET}) ==> {data_atual}")
+        print(f"[{rep}] {Fore.RED}Process:{Fore.RESET} {process.info['name']} (PID: {Fore.YELLOW}{process.info['pid']}{Fore.RESET}) {Fore.GREEN} ==> {Fore.RESET} User: {Fore.BLUE}{process.info['username']} {Fore.RESET} || status: {Back.YELLOW}({process.info['status']}{Back.RESET}) ==> {data_atual}")
         
         # Salvar sem edição de cores
-        #save_activity(f"[{rep}] Process: {process.info['name']} (PID: {process.info['pid']}) ==> User: {nome_user} ==> {data_atual}")
+        #save_activity(f"[{rep}] Process: {process.info['name']} (PID: {process.info['pid']}) ==> User: {process.info['username']} ==> {data_atual}")
 
         # Salvar com edição de cores
-        save_activity(f"[{rep}] {Fore.RED}Process:{Fore.RESET} {process.info['name']} (PID: {Fore.YELLOW}{process.info['pid']}{Fore.RESET}) {Fore.GREEN} ==> {Fore.RESET} User: {Fore.BLUE}{nome_user} {Fore.RESET} || status: {Back.YELLOW}({process.info['status']}{Back.RESET}) ==> {data_atual}")
+        save_activity(f"[{rep}] {Fore.RED}Process:{Fore.RESET} {process.info['name']} (PID: {Fore.YELLOW}{process.info['pid']}{Fore.RESET}) {Fore.GREEN} ==> {Fore.RESET} User: {Fore.BLUE}{process.info['username']} {Fore.RESET} || status: {Back.YELLOW}({process.info['status']}{Back.RESET}) ==> {data_atual}")
         
 # Função para anotar as informações em um documento        
 def save_activity(activity):
