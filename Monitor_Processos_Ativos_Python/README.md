@@ -48,7 +48,7 @@ Este script monitora processos ativos no sistema Linux e cria um log com as info
   ```bash
     [1] Process: python3 (PID: 1234) ==> User: seu_usuario || Status: running ==> 12/12/2023 12:12:12
     [2] Process: bash (PID: 5678) ==> User: seu_usuario || Status: sleeping ==> 12/12/2023 12:12:12
-    
+  ```
 
 ## Contribuição
 - Sinta-se à vontade para abrir pull requests e sugerir melhorias!
