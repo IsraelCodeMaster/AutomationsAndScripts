@@ -23,3 +23,5 @@ Os scripts são escritos em Python e Bash e podem ser usados para diversas final
 1. Clone o repositório.
 2. Execute os scripts conforme descrito nas instruções.
 
+## Para mais projetos como esse, acesse meu Canal no Youtube.
+https://www.youtube.com/@israelalvespro
