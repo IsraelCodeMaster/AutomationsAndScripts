@@ -30,8 +30,9 @@ Este script permite que você baixe vídeos do YouTube selecionando a melhor qua
 ## Uso
 
 Execute o script e insira a URL do vídeo do YouTube quando solicitado:
-```bash
-python3 youtube_downloader.py
+  ```bash
+  python3 youtube_downloader.py
+  ```
 
 O script solicitará que você escolha se deseja selecionar o formato do vídeo. Caso contrário, o formato de maior resolução disponível será selecionado automaticamente.
 
